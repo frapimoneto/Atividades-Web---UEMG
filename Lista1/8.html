@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 8</title>
+
+  <style>
+    body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+      color: gray;
+      padding-bottom: 25px;
+    }
+
+    .entradas {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    .entrada {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .entrada label {
+      font-size: 20px;
+      padding-bottom: 15px;
+    }
+
+    button {
+      margin: 3.2rem 0;
+      max-width: 100px;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+
+  <script>
+    function analisar() {
+      var n1 = document.getElementById('n1').value;
+      var n2 = document.getElementById('n2').value;
+      var n3 = document.getElementById('n3').value;
+      var n4 = document.getElementById('n4').value;
+      var n5 = document.getElementById('n5').value;
+      var impar = 0;
+      var par = 0;
+      var positivo = 0;
+      var negativo = 0;
+
+      var numDigitados = [parseInt(n1), parseInt(n2), parseInt(n3), parseInt(n4), parseInt(n5)];
+
+      for (i = 0; i <= 4; i++) {
+        sinal = Math.sign(numDigitados[i]);
+        paridade = numDigitados[i] % 2;
+
+        if (sinal === 1) {
+          positivo += 1;
+        } else {
+          negativo += 1;
+        }
+
+        if (paridade === 0) {
+          par += 1;
+        } else {
+          impar += 1;
+        }
+
+        // console.log(positivo)
+      }
+      alert("Números positivos: " + positivo + "\n Números negativos: " +
+        negativo + "\n Números ímpares: " + impar + "\n Números pares: " + par)
+    }
+  </script>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Atividade 08</h1>
+    <h2>Preencha os campos abaixos</h2>
+  </div>
+
+  <div class="entradas">
+    <div class="entrada">
+      <label>Número 1</label>
+      <input id="n1" type="text" placeholder="Digite um número">
+    </div>
+    <div class="entrada">
+      <label>Número 2</label>
+      <input id="n2" type="text" placeholder="Digite um número">
+    </div>
+    <div class="entrada">
+      <label>Número 3</label>
+      <input id="n3" type="text" placeholder="Digite um número">
+    </div>
+    <div class="entrada">
+      <label>Número 4</label>
+      <input id="n4" type="text" placeholder="Digite um número">
+    </div>
+    <div class="entrada">
+      <label>Número 5</label>
+      <input id="n5" type="text" placeholder="Digite um número">
+    </div>
+  </div>
+
+  <button onclick="analisar()">Analisar</button>
+</body>
+
+</html>

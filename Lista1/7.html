@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 7</title>
+
+  <style>
+    body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+      color: gray;
+      padding-bottom: 25px;
+    }
+
+    .entradas {
+      display: flex;
+      flex-direction: row;
+      /* justify-content: space-evenly; */
+    }
+
+    .entrada {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .entrada label {
+      font-size: 20px;
+      padding-bottom: 15px;
+    }
+
+    button {
+      /* margin: 3.2rem 0; */
+      margin-top: 38px;
+      max-width: 100px;
+      max-height: 22px;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+
+  <script>
+    function analisar() {
+      var n1 = document.getElementById('n1').value;
+
+      var impostos = parseInt(n1) * 0.45;
+      var final = (impostos + parseInt(n1)) * 1.28;
+
+      alert("Valor de Fábrica: R$ " + n1 + "\nValor final: R$ " + final);
+    }
+  </script>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Atividade 07</h1>
+    <h2>Digite o valor do preço de fábrica e descubra o valor final</h2>
+  </div>
+
+  <div class="entradas">
+    <div class="entrada">
+      <label>Valor de Fábrica</label>
+      <input id="n1" type="text" placeholder="Digite o valor">
+    </div>
+    <button onclick="analisar()">Analisar</button>
+  </div>
+
+
+</body>
+
+</html>
