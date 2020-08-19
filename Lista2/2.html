@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 02</title>
+</head>
+
+<body>
+    <h1>Calcule a expressão dada: D=(R+S)/2, onde R=(A+B)² e S=(B+C)²</h1>
+
+
+    <form action="/action_page.php">
+        <div class="entradas">
+            <div class="entrada">
+                <label for="label">Digite o valor de A:</label>
+                <input type="text" id="x1" name="x1"><br><br>
+            </div>
+            <div class="entrada">
+                <label for="label">Digite o valor de B:</label>
+                <input type="text" id="x2" name="x2"><br><br>
+            </div>
+            <div class="entrada">
+                <label for="label">Digite o valor de C:</label>
+                <input type="text" id="y1" name="y1"><br><br>
+            </div>
+
+            <button type="button" onclick="calcular()">CALCULAR</button>
+        </div>
+    </form>
+
+
+
+
+    <script>
+
+        const calcular = () => {
+            numX1 = document.getElementById('x1').value;
+            numX2 = document.getElementById('x2').value;
+            numY1 = document.getElementById('y1').value;
+            a = parseInt(numX1) + parseInt(numX2);
+            b = parseInt(numX2) + parseInt(numY1);
+
+            c = a * a;
+            d = b * b;
+
+            resultado = (c + d) / 2;
+
+            alert("O resultado da expressão é: " + resultado);
+
+        }
+
+
+    </script>
+
+    <style>
+        .entradas {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .entrada label {
+            font-size: 15px;
+            padding: 15px;
+            font-family: "Roboto";
+        }
+
+        #x1,
+        #x2,
+        #y1,
+        #y2 {
+            border: solid 1px;
+            border-radius: 5px;
+            padding: 5px;
+            height: 25px;
+            width: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 25px;
+            font-family: "Roboto";
+            padding: 15px;
+        }
+
+        button {
+            font-size: 15px;
+            font-family: "Roboto";
+            margin-left: 15px;
+            font-weight: 800;
+            width: 180px;
+            text-align: center;
+            padding: 15px 20px;
+            border: 1px solid #111;
+            border-radius: 6px;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 03</title>
+</head>
+
+<body>
+    <h1>Calcule a média final do aluno. Nota 1: peso 2, nota 2: peso 3, nota 3: peso 5.</h1>
+
+
+    <form action="/action_page.php">
+        <div class="entradas">
+            <div class="entrada">
+                <label for="label">Digite a nota 1:</label>
+                <input type="text" id="x1" name="x1"><br><br>
+            </div>
+            <div class="entrada">
+                <label for="label">Digite a nota 2:</label>
+                <input type="text" id="x2" name="x2"><br><br>
+            </div>
+            <div class="entrada">
+                <label for="label">Digite a nota 3:</label>
+                <input type="text" id="y1" name="y1"><br><br>
+            </div>
+
+            <button type="button" onclick="calcular()">CALCULAR</button>
+        </div>
+    </form>
+
+
+
+
+    <script>
+
+        const calcular = () => {
+            numX1 = document.getElementById('x1').value;
+            numX2 = document.getElementById('x2').value;
+            numY1 = document.getElementById('y1').value;
+            a = parseInt(numX1 * 2) + parseInt(numX2 * 3) + parseInt(numY1 * 5);
+
+            resultado = (a) / 3;
+
+            alert("A média final do aluno é: " + resultado);
+
+        }
+
+
+    </script>
+
+    <style>
+        .entradas {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .entrada label {
+            font-size: 15px;
+            padding: 15px;
+            font-family: "Roboto";
+        }
+
+        #x1,
+        #x2,
+        #y1,
+        #y2 {
+            border: solid 1px;
+            border-radius: 5px;
+            padding: 5px;
+            height: 25px;
+            width: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 25px;
+            font-family: "Roboto";
+            padding: 15px;
+        }
+
+        button {
+            font-size: 15px;
+            font-family: "Roboto";
+            margin-left: 15px;
+            font-weight: 800;
+            width: 180px;
+            text-align: center;
+            padding: 15px 20px;
+            border: 1px solid #111;
+            border-radius: 6px;
+        }
+    </style>
+</body>
+
+</html>
