@@ -3,9 +3,8 @@ import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IFornecedor extends Document {
   nome_fornecedor :string;
-  climate: string;
-  movie_screenings: string;
-  terrain: string;
+  cnpj: string;
+  contato: string;
 }
 
 const FornecedorSchema: Schema = new Schema({
